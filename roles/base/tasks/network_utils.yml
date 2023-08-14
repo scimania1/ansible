@@ -1,0 +1,8 @@
+- name: installing network utilites
+  community.general.pacman:
+    name:
+      - networkmanager
+      - wpa_supplicant
+      - wireless_tools
+      - netctl
+      - dialog

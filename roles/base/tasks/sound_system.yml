@@ -1,0 +1,10 @@
+- name: install sound system
+  community.general.pacman:
+    name: 
+      - pipewire
+      - lib32-pipewire
+      - pipewire-docs
+      - wireplumber
+      - pipewire-audio
+      - pipewire-alsa
+      - pipewire-pulse

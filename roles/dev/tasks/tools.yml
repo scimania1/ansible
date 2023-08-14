@@ -1,0 +1,21 @@
+- name: Installing Dev Tools
+  tags: install,dev
+  community.general.pacman:
+    name:
+      - wezterm
+      - kitty
+      - tmux
+      - neovim
+      - ripgrep
+      - fzf
+      - bat
+      - exa
+      - cmake
+      - btop
+      - htop
+      - rofi
+      - font-manager
+      - zsh
+      - xclip
+      - tldr
+      - shutter

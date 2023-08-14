@@ -1,0 +1,9 @@
+- name: Installing Languages and Related Tools
+  tags: install,languages
+  block:
+    - name: Installing NodeJS
+      tags: install,nodejs
+      community.pacman.general:
+        name:
+          - nodejs
+          - npm

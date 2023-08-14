@@ -1,0 +1,6 @@
+- name: installing bluetooth utilities
+  community.general.pacman:
+    name: 
+      - bluez
+      - bluez-utils
+      - blueberry

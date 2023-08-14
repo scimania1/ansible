@@ -1,0 +1,7 @@
+- name: installing window managers
+  tags: install,window_manager
+  community.general.pacman:
+    name:
+      - i3-wm
+      - i3lock
+      - xss-lock

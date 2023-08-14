@@ -1,0 +1,28 @@
+- name: starting services
+  block:
+    - name: starting SDDM
+      ansible.builtin.service:
+        name: sddm
+        enabled: true
+        state: started
+    - name: starting NetworkManager
+      ansible.builtin.service:
+        name: networkmanager
+        enabled: true
+        state: started
+    - name: starting bluetooth 
+      ansible.builtin.service:
+        name: bluetooth
+        enabled: true
+        state: started
+    - name: starting Power Management
+      ansible.builtin.service:
+        name: acpid
+        enabled: true
+        state: started
+    - name: starting Sound System
+      ansible.builtin.service:
+        name: pipewire-pulse
+        enabled: true
+        state: started
+  become: true

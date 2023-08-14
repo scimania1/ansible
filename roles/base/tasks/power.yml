@@ -1,0 +1,4 @@
+- name: Installing power management utils
+  community.general.pacman:
+    name:
+      - acpid

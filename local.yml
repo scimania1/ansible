@@ -1,0 +1,28 @@
+- name: getting blackbox ready
+  hosts: localhost
+  become: true
+  tags: pre-run
+  pre_tasks:
+    - name: pre-run
+      community.general.pacman: update_cache=true
+      changed_when: False
+      when: ansible_distribution == "Archlinux"
+
+- name: base software packages
+  hosts: localhost
+  become: true
+  roles:
+    - base
+
+- name: starting necesssary services
+  hosts: localhost
+  become: true
+  roles:
+    - services
+
+- name: development packages
+  hosts: localhost
+  become: true
+  roles:
+    - dev
+

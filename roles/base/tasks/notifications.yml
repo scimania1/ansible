@@ -1,0 +1,7 @@
+- name: Installing notification packages
+  tags: install,base,notification
+  community.general.pacman:
+    name:
+      - libnotify
+      - notification-daemon
+      - dunst

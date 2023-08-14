@@ -1,0 +1,10 @@
+- name: installing display server
+  community.general.pacman:
+    name:
+      - xorg
+      - xorg-server
+      - xorg-apps
+      - xorg-xinit
+      - xorg-xclock
+      - sddm
+      - xdg-user-dirs

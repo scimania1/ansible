@@ -1,0 +1,7 @@
+- name: Installing Dev Packages
+  tags: install,dev
+  block:
+    - include_tasks: "window_manager.yml"
+    - include_tasks: "tools.yml"
+    - include_tasks: "languages.yml"
+  become: true
