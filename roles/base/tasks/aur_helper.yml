@@ -1,0 +1,11 @@
+- name: installing AUR helper
+  tags: install,aur
+  block:
+    - name: clone the yay repository
+      ansible.builtin.git:
+        repo: "https://aur.archlinux.org/yay.git"
+        dest: "{{ansible_env.HOME}}/src"
+    
+    - name: install yay
+      ansible.builtin.command: "makepkg -si"
+      chdir: "{{ansible_env.HOME}}/src/yay"

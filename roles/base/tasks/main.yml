@@ -2,16 +2,19 @@
   community.general.pacman:
     name:
       - base-devel
-      - python
-      - python-pip
       - git
+      - xdg-user-dirs
 
 - name: Installing all the utilities
   block:
+    - include_tasks: "aur_helper.yml"
     - include_tasks: "display_server.yml"
     - include_tasks: "network_utils.yml"
     - include_tasks: "sound_system.yml"
     - include_tasks: "power.yml"
     - include_tasks: "bluetooth.yml"
     - include_tasks: "notifications.yml"
+    - include_tasks: "fonts.yml"
+    - include_tasks: "brave.yml"
+    - include_tasks: "theming.yml"
   become: true

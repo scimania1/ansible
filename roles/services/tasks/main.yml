@@ -1,28 +1,41 @@
 - name: starting services
   block:
-    - name: starting SDDM
-      ansible.builtin.service:
-        name: sddm
-        enabled: true
-        state: started
     - name: starting NetworkManager
-      ansible.builtin.service:
+      ansible.builtin.systemd_service:
         name: networkmanager
         enabled: true
         state: started
     - name: starting bluetooth 
-      ansible.builtin.service:
+      ansible.builtin.systemd_service:
         name: bluetooth
         enabled: true
         state: started
     - name: starting Power Management
-      ansible.builtin.service:
+      ansible.builtin.systemd_service:
         name: acpid
         enabled: true
         state: started
     - name: starting Sound System
-      ansible.builtin.service:
+      ansible.builtin.systemd_service:
         name: pipewire-pulse
         enabled: true
         state: started
+        scope: user
+    - name: starting xdg-desktop-portal
+      ansible.builtin.systemd_service:
+        name: xdg-desktop-portal
+        scope: user
+        state: started
+        enabled: true
+    - name: masking xdg-desktop-portal-gnome
+      ansible.builtin.systemd_service:
+        name: xdg-desktop-portal-gnome
+        scope: user
+        masked: true
+    - name: starting xdg-desktop-portal-gtk
+      ansible.builtin.systemd_service:
+        name: xdg-desktop-portal-gtk
+        scope: user
+        state: started
+        enabled: true
   become: true

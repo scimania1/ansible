@@ -1,0 +1,9 @@
+- name: installing themes and lxsession
+  tags: install
+  community.general.pacman:
+    name:
+      - lxsession
+      - lxappearance
+      - qt5ct
+      - adwaita-qt5
+  ansible.builtin.command: "yay -S adwaita-dark qt5-styleplugins"

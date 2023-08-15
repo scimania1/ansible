@@ -1,0 +1,3 @@
+- name: Installing the Brave Browser
+  tags: install,browser
+  ansible.builtin.command: "yay -S brave-bin"

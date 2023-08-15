@@ -2,7 +2,6 @@
   tags: install,dev
   community.general.pacman:
     name:
-      - wezterm
       - kitty
       - tmux
       - neovim

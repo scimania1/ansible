@@ -1,0 +1,15 @@
+- name: installing fonts
+  tags: install,fonts
+  community.general.pacman:
+    name:
+      - noto-fonts
+      - noto-fonts-cjk
+      - noto-fonts-emoji
+      - noto-fonts-extra
+      - ttf-bitstream-vera
+      - ttf-dejavu
+      - gnu-free-fonts
+      - ttf-liberation
+      - ttf-font-awesome
+      - ttf-ubuntu-font-family
+  ansible.builtin.command: "yay -S ttf-ms-win11-auto"

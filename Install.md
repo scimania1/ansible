@@ -55,7 +55,7 @@
 ## Step 5: Installing the boot loader (GRUB)
 
 1. `pacman -S grub efibootmgr dosfstools os-prober mtools`
-2. Then run `grub-install --target=x86_64-efi --efi-directory=/mnt/boot --bootloader-id=GRUB --recheck`
+2. Then run `grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB --recheck`
 3. For english error messages:
 	- `cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo`
 4. Install the `intel-microcode`: `pacman -S intel-ucode amd-ucode`
