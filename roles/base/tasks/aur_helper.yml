@@ -7,4 +7,6 @@
         dest: "{{ansible_env.HOME}}/src"
     
     - name: install yay
-      ansible.builtin.command: "cd {{ lookup('env', HOME) }}/src/yay && makepkg -si"
+      ansible.builtin.command: "makepkg -si"
+      args:
+        chdir: "{{ansible_env.HOME}}/src/yay"
