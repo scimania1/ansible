@@ -21,21 +21,21 @@
         enabled: true
         state: started
         scope: user
-    - name: starting xdg-desktop-portal
-      ansible.builtin.systemd_service:
-        name: xdg-desktop-portal
-        scope: user
-        state: started
-        enabled: true
-    - name: masking xdg-desktop-portal-gnome
-      ansible.builtin.systemd_service:
-        name: xdg-desktop-portal-gnome
-        scope: user
-        masked: true
-    - name: starting xdg-desktop-portal-gtk
-      ansible.builtin.systemd_service:
-        name: xdg-desktop-portal-gtk
-        scope: user
-        state: started
-        enabled: true
+    # - name: starting xdg-desktop-portal
+    #   ansible.builtin.systemd_service:
+    #     name: xdg-desktop-portal
+    #     scope: user
+    #     state: started
+    #     enabled: true
+    # - name: masking xdg-desktop-portal-gnome
+    #   ansible.builtin.systemd_service:
+    #     name: xdg-desktop-portal-gnome
+    #     scope: user
+    #     masked: true
+    # - name: starting xdg-desktop-portal-gtk
+    #   ansible.builtin.systemd_service:
+    #     name: xdg-desktop-portal-gtk
+    #     scope: user
+    #     state: started
+    #     enabled: true
   become: true

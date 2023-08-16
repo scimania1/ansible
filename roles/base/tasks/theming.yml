@@ -6,4 +6,4 @@
       - lxappearance
       - qt5ct
       - adwaita-qt5
-  ansible.builtin.command: "yay -S adwaita-dark qt5-styleplugins"
+  # ansible.builtin.shell: "yay -S adwaita-dark qt5-styleplugins"

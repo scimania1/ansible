@@ -6,7 +6,7 @@
       - xorg-apps
       - xorg-xinit
       - xorg-xclock
-      - lightdm
+      - sddm
       - xdg-user-dirs
       - xdg-desktop-portal
       - xdg-desktop-portal-gtk

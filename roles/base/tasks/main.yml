@@ -15,6 +15,6 @@
     - include_tasks: "bluetooth.yml"
     - include_tasks: "notifications.yml"
     - include_tasks: "fonts.yml"
-    - include_tasks: "brave.yml"
+    # - include_tasks: "brave.yml"
     - include_tasks: "theming.yml"
   become: true
