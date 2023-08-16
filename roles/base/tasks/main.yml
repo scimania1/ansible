@@ -7,7 +7,7 @@
 
 - name: Installing all the utilities
   block:
-    - include_tasks: "aur_helper.yml"
+    # - include_tasks: "aur_helper.yml"
     - include_tasks: "display_server.yml"
     - include_tasks: "network_utils.yml"
     - include_tasks: "sound_system.yml"
